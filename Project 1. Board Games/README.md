@@ -1,6 +1,10 @@
-This folder contains the input, output and notebook files for the first project of the Udacity Data Scientist NanoDegree program (Term 2).
+# Project 1. Board Games
 
-The key notebook file is `Board_Games.ipynb`, which looks at the characterisics of a large set of board-games.  We explore the relationship between games' age-ranges and play-times, as well as attempting to predict the games rating.
+This folder contains the notebook, input and output files for the first project of the Udacity Data Scientist NanoDegree program (Term 2).
+
+## Files
+
+The key notebook file is `Board_Games.ipynb`, which looks at the characterisics of a large set of board-games.  We explore the relationship between games' age-ranges and play-times, as well as attempting to predict the games rating.  We eventually reach an R2 value (for linear regression) of just over 0.3.
 
 It uses a data set from [Kaggle](https://www.kaggle.com/mshepherd/board-games), stored in the `BGG.csv` file.  This dataset was created by Markus Shepherd.
 
@@ -8,7 +12,9 @@ It also requires two json dictionaries, `categories.json` & `mechanics.json`, as
 
 There are several graphical outputs saved here, which are used in the [Medium Post](https://medium.com/p/c31340859bef) describing this work.
 
-----
+## Requirements
+
+The notebook runs in a python3 [Jupyter Kernel](https://jupyter.org/install)
 
 Required python libraries to run the notebook:
 ```
