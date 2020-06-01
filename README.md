@@ -7,6 +7,11 @@ Covers Exploratory Data analysis of an interesting data set, a simple LinearRegr
 
 ## Project 2 - Software Engineering
 
+Covers the foundations of OOP including:
+- creating a class, and two daughter-classes
+- packaging the package correctly
+- uploading to PyPi (I left mine at test-PyPi, rather than cluttering the PyPi index)
+
 ## Project 3 - Data Engineering
 
 ## Project 4 - Experimental Design & Recommendations
