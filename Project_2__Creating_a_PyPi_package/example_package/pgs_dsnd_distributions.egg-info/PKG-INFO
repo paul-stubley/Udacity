@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: pgs-dsnd-distributions
-Version: 0.4
+Version: 0.5
 Summary: Gaussian & Binomial distributions
-Home-page: UNKNOWN
+Home-page: https://github.com/paul-stubley/Udacity/tree/master/Project_2__Creating_a_PyPi_package
 License: UNKNOWN
 Description: # Overview
         
@@ -19,8 +19,9 @@ Description: # Overview
         For help on using each class:
         
         ```
-        Gaussian?
-        Binomial?
+        help(Gaussian)
+        help(Binomial)
+        # Type 'q' to exit help.
         ```
         
         # Context
