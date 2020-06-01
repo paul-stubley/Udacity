@@ -1,0 +1,11 @@
+README.md
+setup.py
+pgs_dsnd_distributions/Binomialdistribution.py
+pgs_dsnd_distributions/Gaussiandistribution.py
+pgs_dsnd_distributions/Generaldistribution.py
+pgs_dsnd_distributions/__init__.py
+pgs_dsnd_distributions.egg-info/PKG-INFO
+pgs_dsnd_distributions.egg-info/SOURCES.txt
+pgs_dsnd_distributions.egg-info/dependency_links.txt
+pgs_dsnd_distributions.egg-info/not-zip-safe
+pgs_dsnd_distributions.egg-info/top_level.txt
