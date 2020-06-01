@@ -13,6 +13,12 @@ __init__.py # Tells python this is a package
 #######
 
 
+####### Checking pip install locally
+
+# Run the code below in the folder containing the setup.py file and the package folder
+pip install .
+
+
 ####### Uploading to Pypi
 
 # If you haven’t installed twine, do so
