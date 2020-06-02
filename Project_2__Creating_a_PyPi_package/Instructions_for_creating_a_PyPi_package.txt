@@ -10,11 +10,13 @@ __init__.py # Tells python this is a package
 <python files>
 …
 
-#######
+####### GOTCHAS
+
+Make sure that if the python files refer to (import from) each other, that they have a '.' before them in the import statement so that they'll be able to run correctly once packaged.
 
 ####### Creating a virtual environment to test load
 python3 -m venv <env_name>
-source <env_name>/bin/activate
+source <env_path_and_name>/bin/activate
 
 ####### Checking pip install locally
 
@@ -32,7 +34,7 @@ pip install .
 
 ‭# commands to upload to the pypi test repository‬
 ‭twine upload --repository-url https://test.pypi.org/legacy/ dist/*‬
-‭pip install --index-url https://test.pypi.org/simple/ <package name>
+pip install --index-url https://test.pypi.org/simple/ <package name>
 
 ‭# command to upload to the pypi repository‬
 ‭twine upload dist/*‬
