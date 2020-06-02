@@ -12,6 +12,9 @@ __init__.py # Tells python this is a package
 
 #######
 
+####### Creating a virtual environment to test load
+python3 -m venv <env_name>
+source <env_name>/bin/activate
 
 ####### Checking pip install locally
 
@@ -24,13 +27,12 @@ pip install .
 # If you haven’t installed twine, do so
 
 # change directory to the folder containing the package (and the setup.py file)
-‭cd binomial_package_files‬
 ‭python setup.py sdist   # You’ll need to remove the dust and distributions.egg-info file to run this again if you need to update.‬
 
 
 ‭# commands to upload to the pypi test repository‬
 ‭twine upload --repository-url https://test.pypi.org/legacy/ dist/*‬
-‭pip install --index-url https://test.pypi.org/simple/ dsnd-probability‬
+‭pip install --index-url https://test.pypi.org/simple/ <package name>
 
 ‭# command to upload to the pypi repository‬
 ‭twine upload dist/*‬
