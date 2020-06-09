@@ -8,7 +8,7 @@ from nltk.tokenize import word_tokenize
 from flask import Flask
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
-from sklearn.externals import joblib
+import joblib
 from sqlalchemy import create_engine
 
 
@@ -26,42 +26,82 @@ def tokenize(text):
     return clean_tokens
 
 # load data
-engine = create_engine('sqlite:///../data/YourDatabaseName.db')
-df = pd.read_sql_table('YourTableName', engine)
+engine = create_engine('sqlite:///../data/DisasterResponse.db')
+df = pd.read_sql_table('disaster_response', engine)
 
 # load model
-model = joblib.load("../models/your_model_name.pkl")
+model = joblib.load("../models/classifier.pkl")
 
 
-# index webpage displays cool visuals and receives user input text for model
+# index webpage displays visuals and receives user input text for model
 @app.route('/')
 @app.route('/index')
 def index():
     
     # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
-    genre_counts = df.groupby('genre').count()['message']
-    genre_names = list(genre_counts.index)
-    
+    genre_counts = df.groupby('genre').count()['message'].sort_values(ascending=False)
+    genre_names = list(genre_counts.index.str.title())
+
+    category_counts = df.sum(axis=0, numeric_only = True).sort_values()
+    category_names = list(category_counts.index.str.replace('_', ' ').str.title())   
+
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
             'data': [
                 Bar(
                     x=genre_names,
-                    y=genre_counts
+                    y=genre_counts,
+                    text=genre_counts,
+                    hoverinfo= 'x+y',
+                    textposition='outside',
+                    cliponaxis = False,
+                    marker={'color': genre_counts
+                        , 'colorscale': 'Agsunset_r'}
+                    
                 )
+ 
+
             ],
 
             'layout': {
                 'title': 'Distribution of Message Genres',
                 'yaxis': {
-                    'title': "Count"
+                    'visible': False,  
+                    #'title': "Count"
                 },
                 'xaxis': {
-                    'title': "Genre"
+                    #'title': "Genre"
                 }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    y=category_names,
+                    x=category_counts,
+                    orientation = 'h',
+                    hoverinfo= 'x+y',
+                    text=category_counts,
+                    textposition='outside',
+                    cliponaxis = False,
+                    marker={'color':category_counts
+                        , 'colorscale': 'Agsunset_r'}
+                )
+ 
+
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Categories<br>(note that certain categories are very sparce in the training set)',
+                'xaxis': {
+                    'visible': False,  
+                    #'title': "Count"
+                },
+                'margin': {
+                    'l': 200,                   
+                }, 
+                'height': 800,
             }
         }
     ]
