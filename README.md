@@ -15,7 +15,7 @@ Covers the foundations of OOP including:
 
 ### Introduction to Web Development
 
-Covers the foundations of HTML, css, javascript, bootstrap, plotly (JS and Python) and deploying a web app using Heroku.
+Covers the foundations of HTML, css, javascript, bootstrap, plotly (JS and Python) and deploying a Flask app using Heroku.
 
 The output can be found [here](https://pgs-worldbank-app.herokuapp.com/)
 
