@@ -20,7 +20,7 @@ As part of the Udacity DataScience Nanodegree, I have been provided with labelle
 The output can be seen, and new messages can be classified, using this Heroku app. (Link TBD)
 
 <p align="center">
-<img src="data/example_output.png" width=50%>
+<img src="data/example_output.png" width=80%>
 </p>
 
 ## Details of project
