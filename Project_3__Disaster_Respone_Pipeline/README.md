@@ -18,6 +18,7 @@ As part of the Udacity DataScience Nanodegree, I have been provided with labelle
 ## Output
 
 The output can be seen, and new messages can be classified, using this Heroku app. (Link TBD)
+![Example output of classifier app](data/example_output.png)
 
 ## Details of project
 ### Data Cleansing ETL
@@ -36,7 +37,7 @@ We then write this cleaned data to a local database (filename given as a runtime
 
 This code is provided in `./models/train_classifier.py`.
 
-The code ingests the data from the local database, then tokenises it, runs it through [TF-IDF](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html), and then in to one of a selection of classifiers.  The classifiers investigated are shown below alongside their scores (with default parameters):
+The code ingests the data from the local database, then tokenises it, runs it through [TF-IDF](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html), and then in to one of a selection of classifiers.  The `sklearn` classifiers investigated are shown below alongside their scores (with default parameters):
 
 | Classifier | accuracy* | precision  |  recall | f1-score  | support | fit-time (secs) |
 |---|---|---|---|---|---|---|
