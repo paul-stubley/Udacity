@@ -18,7 +18,10 @@ As part of the Udacity DataScience Nanodegree, I have been provided with labelle
 ## Output
 
 The output can be seen, and new messages can be classified, using this Heroku app. (Link TBD)
-![Example output of classifier app](data/example_output.png)
+
+<p align="center">
+<img src="data/example_output.png" width=50%>
+</p>
 
 ## Details of project
 ### Data Cleansing ETL
