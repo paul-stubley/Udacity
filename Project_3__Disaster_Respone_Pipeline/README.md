@@ -4,6 +4,17 @@
 
 As part of the Udacity DataScience Nanodegree, I have been provided with labelled disaster-reponse message (social, news and direct messages).  The goal is to create a classifier app that can classify an unseen message into one or more of ~36 categories (e.g. Infrastructure, Earthquale, Food, Flood etc.).
 
+## Example training input
+> Weather update - a cold front from Cuba that could pass over Haiti
+
+> Is the Hurricane over or is it not over
+
+> Looking for someone but no name
+
+> UN reports Leogane 80-90 destroyed. Only Hospital St. Croix functioning. Needs supplies desperately.
+
+> Please, we need tents and water. We are in Silo, Thank you!
+
 ## Output
 
 The output can be seen, and new messages can be classified, using this Heroku app. (Link TBD)
