@@ -9,12 +9,12 @@
 
 {% block content %}
     <h1 class="text-center">Result</h1>
-        <ul class="list-group">
+        <ul class="list-group my-table">
             {% for category, classification in classification_result.items() %}
                 {% if classification == 1 %}
-                    <li class="list-group-item list-group-item-success text-center">{{category.replace('_', ' ').title()}}</li>
+                    <li class="my-li list-group-item list-group-item-danger text-center">{{category.replace('_', ' ').title()}}</li>
                 {% else %}
-                    <li class="list-group-item list-group-item-dark text-center">{{category.replace('_', ' ').title()}}</li>
+                    <li class="my-li list-group-item list-group-item-dark text-center">{{category.replace('_', ' ').title()}}</li>
                 {% endif %}
             {% endfor %}
 
