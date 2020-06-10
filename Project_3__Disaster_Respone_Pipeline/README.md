@@ -2,7 +2,7 @@
 
 ## Context
 
-As part of the Udacity DataScience Nanodegree, I have been provided with labelled disaster-reponse message (social, news and direct messages).  The goal is to create a classifier app that can classify an unseen message into one or more of ~36 categories (e.g. Infrastructure, Earthquale, Food, Flood etc.).
+As part of the Udacity DataScience Nanodegree, I have been provided with labelled disaster-response message (social, news and direct messages).  The goal is to create a classifier app that can classify an unseen message into one or more of ~36 categories (e.g. Infrastructure, Earthquale, Food, Flood etc.).
 
 ## Folder Structure
 ```
