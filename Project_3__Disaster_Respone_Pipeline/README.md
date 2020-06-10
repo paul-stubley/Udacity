@@ -17,7 +17,7 @@ As part of the Udacity DataScience Nanodegree, I have been provided with labelle
 
 ## Output
 
-The output can be seen, and new messages can be classified, using this Heroku app. (Link TBD)
+An example of the output can be seen below. New messages can be classified by running the app locally using `python3 run.py`
 
 <p align="center">
 <img src="data/example_output.png" width=80%>
