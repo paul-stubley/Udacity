@@ -103,3 +103,19 @@ parameters = {
              }
 ```
 and found that the `modified_huber` loss function improved the predictions of the test data, but that the other changes did not make a difference to the fit.
+
+#### Imbalanced labels in training set
+
+As can be seen from the count of messages per category above, there is a large imbalance in the number of training messages we have for each category.  Correcting for this imbalance is an area of active research (e.g. the citations in [this](https://arxiv.org/pdf/1802.05033.pdf) paper).  Essentially, with a naive scoring function for fitting the model, we may end up with a model that classifies "relevant" very well, but is terrible at classifying the more niche "fire" category.
+
+In addition, for certain categories it may be more important to reduce false-positives or reduce false-negatives, for certain categories, it may be more important to capture every instance and *put up with* a few false postives, for these, we should optimise for *recall*.  If, on the other hand, the services that cope with a certain category of messages are inundated with non-relevant messages (too many false-positives), we should optimise that category for *precision*.
+
+#### Further thoughts on the ML fitting
+
+As we can see with the example output, there are differences between the sources in terms of the length of messages, also, as can be seen below, there is a skew in the *category* of messages from each source. Here the colorbar is the 
+
+<p align="center">
+<img src="data/example_output4.png" width=80%>
+</p>
+
+As such, we could include both the genre and other features (e.g. the length of the message) in the model as features.  These would be passed to the model using [FeatureUnions](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html).
