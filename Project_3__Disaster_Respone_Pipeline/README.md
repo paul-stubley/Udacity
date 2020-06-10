@@ -112,10 +112,18 @@ In addition, for certain categories it may be more important to reduce false-pos
 
 #### Further thoughts on the ML fitting
 
+##### More features
+
 As we can see with the example output, there are differences between the sources in terms of the length of messages, also, as can be seen below, there is a skew in the *category* of messages from each source. Here the colorbar is the percentage of all labels that were a particular category, for each genre:
 
 <p align="center">
 <img src="data/example_output4.png" width=80%>
 </p>
 
-As such, we could include both the genre and other features (e.g. the length of the message) in the model as features.  These would be passed to the model using [FeatureUnions](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html).
+As such, we could include both the genre and other features (e.g. the length of the message or amount of puncutation used) in the model as features.  These would be passed to the model using [FeatureUnions](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html).
+
+##### Different tokenising
+
+At one point in fitting the model, I attempted to remove stop words from the messages. This resulted in halving the fit-score!  This made me think, exploring different tokenising methods (e.g. removing some/all of stemming, lemmatising nouns, lemmatising verbs) should be investigated as a next step.
+
+
