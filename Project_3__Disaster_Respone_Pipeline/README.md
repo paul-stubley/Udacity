@@ -4,6 +4,29 @@
 
 As part of the Udacity DataScience Nanodegree, I have been provided with labelled disaster-reponse message (social, news and direct messages).  The goal is to create a classifier app that can classify an unseen message into one or more of ~36 categories (e.g. Infrastructure, Earthquale, Food, Flood etc.).
 
+## Folder Structure
+```
+.
+├── README.md
+├── app                                 -- Code for running the app
+│   ├── run.py                              -- python web app
+│   └── templates
+│       ├── go.html                         -- Classification page of app html
+│       └── master.html                     -- Homepage of app html
+├── data                                -- Input data and cleaned data
+│   ├── DisasterResponse.db                 -- cleaned data
+│   ├── disaster_categories.csv             -- input data
+│   ├── disaster_messages.csv               -- input data
+│   ├── example_output.png                  -- image for readme
+│   └── process_data.py                     -- script to run data cleansing
+├── models                              -- Models
+│   ├── classifier.pkl                      -- Saved model
+│   └── train_classifier.py                 -- script to rerun model fitting
+└── notebooks                           -- Working documents
+    ├── ETL\ Pipeline\ Preparation.ipynb
+    └── ML\ Pipeline\ Preparation.ipynb
+```
+
 ## Example training input
 > Weather update - a cold front from Cuba that could pass over Haiti
 
@@ -17,7 +40,7 @@ As part of the Udacity DataScience Nanodegree, I have been provided with labelle
 
 ## Output
 
-The output can be seen, and new messages can be classified, using this Heroku app. (Link TBD)
+An example of the output can be seen below. New messages can be classified by running the app locally using `python3 run.py`
 
 <p align="center">
 <img src="data/example_output.png" width=80%>
@@ -35,6 +58,10 @@ The data is provided in two files, one containing the messages `./data/disaster_
     *(As we would never be able to predict them, and they cause some ML classifiers to fail).*
 - Clean a few messages that have a value of >1 for a given category.
 We then write this cleaned data to a local database (filename given as a runtime argument) here: `./data/DisasterResponse.db` in the table `disaster_response`
+
+Re-running the data cleansing can be achieved by running:
+
+```python3 process_data.py disaster_messages.csv disaster_categories.csv <DataBaseFilenameToSaveTo>```
 
 ### The ML pipeline
 
@@ -55,7 +82,11 @@ The code ingests the data from the local database, then tokenises it, runs it th
 
 i.e. it has to get every single label right for each message, which is not necessarily the output we require, as long as it gets some right the classifier can still be useful.
 
-### Grid Search
+Re-running the ML model build can be achieved by running:
+
+```python3 train_classifier.py  <DataBaseFilenameToLoadFrom> <ClassifierPickleFileToSaveTo>```
+
+#### Grid Search
 
 Having found a classifier we are happy with, we ran Cross Validation over a grid of the following parameters:
 ```
