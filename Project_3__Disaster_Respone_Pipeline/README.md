@@ -5,48 +5,27 @@
 As part of the Udacity DataScience Nanodegree, I have been provided with labelled disaster-reponse message (social, news and direct messages).  The goal is to create a classifier app that can classify an unseen message into one or more of ~36 categories (e.g. Infrastructure, Earthquale, Food, Flood etc.).
 
 ## Folder Structure
-
+```
 .
-
 ├── README.md
-
-├── app
-
-│   ├── run.py
-
+├── app                                 -- Code for running the app
+│   ├── run.py                              -- python web app
 │   └── templates
-
-│       ├── go.html
-
-│       └── master.html
-
-├── data
-
-│   ├── DisasterResponse.db
-
-│   ├── disaster_categories.csv
-
-│   ├── disaster_messages.csv
-
-│   ├── disasterresponse.csv
-
-│   ├── disasterresponse.json
-
-│   ├── example_output.png
-
-│   └── process_data.py
-
-├── models
-
-│   ├── classifier.pkl
-
-│   └── train_classifier.py
-
-└── notebooks
-
+│       ├── go.html                         -- Classification page of app html
+│       └── master.html                     -- Homepage of app html
+├── data                                -- Input data and cleaned data
+│   ├── DisasterResponse.db                 -- cleaned data
+│   ├── disaster_categories.csv             -- input data
+│   ├── disaster_messages.csv               -- input data
+│   ├── example_output.png                  -- image for readme
+│   └── process_data.py                     -- script to run data cleansing
+├── models                              -- Models
+│   ├── classifier.pkl                      -- Saved model
+│   └── train_classifier.py                 -- script to rerun model fitting
+└── notebooks                           -- Working documents
     ├── ETL\ Pipeline\ Preparation.ipynb
-    
     └── ML\ Pipeline\ Preparation.ipynb
+```
 
 ## Example training input
 > Weather update - a cold front from Cuba that could pass over Haiti
