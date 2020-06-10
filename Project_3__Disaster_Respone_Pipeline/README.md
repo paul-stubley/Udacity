@@ -46,6 +46,12 @@ An example of the output can be seen below. New messages can be classified by ru
 <img src="data/example_output.png" width=80%>
 </p>
 
+<p align="center">
+<img src="data/example_output1.png" width=30%>
+<img src="data/example_output2.png" width=30%>
+<img src="data/example_output3.png" width=30%>
+</p>
+
 ## Details of project
 ### Data Cleansing ETL
 
