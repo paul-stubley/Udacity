@@ -108,7 +108,7 @@ and found that the `modified_huber` loss function improved the predictions of th
 
 As can be seen from the count of messages per category above, there is a large imbalance in the number of training messages we have for each category.  Correcting for this imbalance is an area of active research (e.g. the citations in [this](https://arxiv.org/pdf/1802.05033.pdf) paper).  Essentially, with a naive scoring function for fitting the model, we may end up with a model that classifies "relevant" very well, but is terrible at classifying the more niche "fire" category.
 
-In addition, for certain categories it may be more important to reduce false-positives or reduce false-negatives, for certain categories, it may be more important to capture every instance and *put up with* a few false postives, for these, we should optimise for *recall*.  If, on the other hand, the services that cope with a certain category of messages are inundated with non-relevant messages (too many false-positives), we should optimise that category for *precision*.
+In addition, for certain categories it may be more important to reduce false-positives or reduce false-negatives. For certain categories, it may be more important to capture every instance and *put up with* a few false positives, for these, we should optimise for *recall*.  If, on the other hand, the services that cope with a certain category of messages are inundated with non-relevant messages (too many false-positives), we should optimise that category for *precision*.
 
 #### Further thoughts on the ML fitting
 
