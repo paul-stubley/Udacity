@@ -112,7 +112,7 @@ In addition, for certain categories it may be more important to reduce false-pos
 
 #### Further thoughts on the ML fitting
 
-As we can see with the example output, there are differences between the sources in terms of the length of messages, also, as can be seen below, there is a skew in the *category* of messages from each source. Here the colorbar is the 
+As we can see with the example output, there are differences between the sources in terms of the length of messages, also, as can be seen below, there is a skew in the *category* of messages from each source. Here the colorbar is the percentage of all labels that were a particular category, for each genre:
 
 <p align="center">
 <img src="data/example_output4.png" width=80%>
