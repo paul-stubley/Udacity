@@ -21,6 +21,12 @@ The output can be found [here](https://pgs-worldbank-app.herokuapp.com/)
 
 ## Project 3 - Data Engineering
 
+### Disaster Response ML pipeline & App
+
+This project covers the ETL & ML pipelines for a disaster recovery app, as well as deploying as a local Flask app.
+
+Taking labelled direct messages, and those from social-media & news, at the time of a disaster, can we classify unlabelled messages into categories (e.g. Fire, Infrastrucure, Medical Assistance etc.) to pass on to emergency & support services.
+
 ## Project 4 - Experimental Design & Recommendations
 
 ## Project 5 - Capstone Project
