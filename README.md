@@ -11,7 +11,7 @@ Covers Exploratory Data analysis of an interesting data set, a simple LinearRegr
 Covers the foundations of OOP including:
 - creating a class, and two daughter-classes
 - packaging the package correctly
-- uploading to PyPi (I left mine at test-PyPi, rather than cluttering the PyPi index, but I uploaded my Climbing package to Pypi to test these new skills, see my other repos)
+- uploading to PyPi (I left mine at test-PyPi, rather than cluttering the PyPi index, but I uploaded my [Climbing](https://github.com/paul-stubley/Climbing) package to Pypi to test these new skills)
 
 ### Introduction to Web Development
 
