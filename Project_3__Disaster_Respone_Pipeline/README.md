@@ -18,7 +18,10 @@ As part of the Udacity DataScience Nanodegree, I have been provided with labelle
 ## Output
 
 The output can be seen, and new messages can be classified, using this Heroku app. (Link TBD)
-![Example output of classifier app](data/example_output.png)
+
+<p align="center">
+<img src="data/example_output.png" width=80%>
+</p>
 
 ## Details of project
 ### Data Cleansing ETL
@@ -46,7 +49,7 @@ The code ingests the data from the local database, then tokenises it, runs it th
 |**LogisticRegression**|  0.29 | 0.78     | 0.55  |    0.60   | 20711| 43.44 |
 |**StochasticGradientDecent**| 0.31 | 0.76  |    0.57  |    0.61  |   20459 | 29.97 |
 
-The reason accuracy is low relative to the other score metrics is detailed [here](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html), but in essence:
+\*the reason accuracy is low relative to the other score metrics is detailed [here](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html), but in essence:
 
 >In multilabel classification, this function computes subset accuracy: the set of labels predicted for a sample must exactly match the corresponding set of labels in y_true.
 
