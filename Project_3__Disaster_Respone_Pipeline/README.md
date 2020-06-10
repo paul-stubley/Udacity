@@ -4,6 +4,50 @@
 
 As part of the Udacity DataScience Nanodegree, I have been provided with labelled disaster-reponse message (social, news and direct messages).  The goal is to create a classifier app that can classify an unseen message into one or more of ~36 categories (e.g. Infrastructure, Earthquale, Food, Flood etc.).
 
+## Folder Structure
+
+.
+
+├── README.md
+
+├── app
+
+│   ├── run.py
+
+│   └── templates
+
+│       ├── go.html
+
+│       └── master.html
+
+├── data
+
+│   ├── DisasterResponse.db
+
+│   ├── disaster_categories.csv
+
+│   ├── disaster_messages.csv
+
+│   ├── disasterresponse.csv
+
+│   ├── disasterresponse.json
+
+│   ├── example_output.png
+
+│   └── process_data.py
+
+├── models
+
+│   ├── classifier.pkl
+
+│   └── train_classifier.py
+
+└── notebooks
+
+    ├── ETL\ Pipeline\ Preparation.ipynb
+    
+    └── ML\ Pipeline\ Preparation.ipynb
+
 ## Example training input
 > Weather update - a cold front from Cuba that could pass over Haiti
 
@@ -36,6 +80,10 @@ The data is provided in two files, one containing the messages `./data/disaster_
 - Clean a few messages that have a value of >1 for a given category.
 We then write this cleaned data to a local database (filename given as a runtime argument) here: `./data/DisasterResponse.db` in the table `disaster_response`
 
+Re-running the data cleansing can be achieved by running:
+
+```python3 process_data.py disaster_messages.csv disaster_categories.csv <DataBaseFilenameToSaveTo>```
+
 ### The ML pipeline
 
 This code is provided in `./models/train_classifier.py`.
@@ -55,7 +103,11 @@ The code ingests the data from the local database, then tokenises it, runs it th
 
 i.e. it has to get every single label right for each message, which is not necessarily the output we require, as long as it gets some right the classifier can still be useful.
 
-### Grid Search
+Re-running the ML model build can be achieved by running:
+
+```python3 train_classifier.py  <DataBaseFilenameToLoadFrom> <ClassifierPickleFileToSaveTo>```
+
+#### Grid Search
 
 Having found a classifier we are happy with, we ran Cross Validation over a grid of the following parameters:
 ```
