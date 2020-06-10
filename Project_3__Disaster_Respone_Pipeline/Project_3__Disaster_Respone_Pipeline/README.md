@@ -2,7 +2,7 @@
 
 ## Context
 
-As part of the Udacity DataScience Nanodegree, I have been provided with labelled disaster-reponse message (social, news and direct messages).  The goal is to create a classifier app that can classify an unseen message into one or more of ~36 categories (e.g. Infrastructure, Earthquale, Food, Flood etc.).
+As part of the Udacity DataScience Nanodegree (full repo [here](https://github.com/paul-stubley/Udacity)), I have been provided with labelled disaster-reponse message (social, news and direct messages).  The goal is to create a classifier app that can classify an unseen message into one or more of ~36 categories (e.g. Infrastructure, Earthquale, Food, Flood etc.).
 
 ## Example training input
 > Weather update - a cold front from Cuba that could pass over Haiti
