@@ -10,7 +10,8 @@ It uses a data set from [Kaggle](https://www.kaggle.com/mshepherd/board-games), 
 
 It also requires two json dictionaries, `categories.json` & `mechanics.json`, as certain features are provided in a non-human-readable way.  This were copied from the BoardGameAtlas [docs](https://www.boardgameatlas.com/api/docs/game/mechanics).
 
-There are several graphical outputs saved here, which are used in the [Medium Post](https://medium.com/p/c31340859bef) describing this work.
+<a href="https://medium.com/@paulgstubley/bored-games-c31340859bef?source=friends_link&sk=ed9a21aa4b75262a4a46b7dec87a9df6" target="_blank"><img alt="Medium logo" src="../images/medium.png" align="left" height="45px"></a>
+There are several graphical outputs saved here, which are used in the [Medium Post](https://medium.com/p/c31340859bef) describing this work.<br><br>
 
 ## Requirements
 
