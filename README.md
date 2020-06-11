@@ -1,13 +1,12 @@
 # Udacity
-
 This repo contains work towards the [Udacity](https://www.udacity.com/) Data Science NanoDegree.  It is work in progress split by Project.
 
 ## Project 1 - Intro to DS
-Covers Exploratory Data analysis of an interesting data set, a simple LinearRegression model fit, and creating content to upload to a Medium post.
+<a href="https://medium.com/@paulgstubley/bored-games-c31340859bef?source=friends_link&sk=ed9a21aa4b75262a4a46b7dec87a9df6" target="_blank"><img alt="Medium logo" src="images/medium.png" align="right" height="45px"></a> Covers Exploratory Data analysis of an interesting data set, a simple LinearRegression model fit, and creating content to upload to a Medium post.
 
 ## Project 2 - Software Engineering
 ### Introduction to OOP
-
+<a href="https://pypi.org/project/pgs-climbing/" target="_blank"><img alt="PyPi logo" src="images/pypi.png" align="right" height="45px"></a>
 Covers the foundations of OOP including:
 - creating a class, and two daughter-classes
 - packaging the package correctly
@@ -15,6 +14,7 @@ Covers the foundations of OOP including:
 
 ### Introduction to Web Development
 
+<a href="https://pgs-ny-collisions.herokuapp.com/" target="_blank"><img alt="Heroku logo" src="images/heroku.png" align="right" height="45px"></a>
 Covers the foundations of HTML, css, javascript, bootstrap, plotly (JS and Python) and deploying a Flask app using Heroku.
 
 The output can be found [here](https://pgs-worldbank-app.herokuapp.com/)
