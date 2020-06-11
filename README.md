@@ -14,7 +14,7 @@ Covers the foundations of OOP including:
 
 ### Introduction to Web Development
 
-<a href="https://pgs-ny-collisions.herokuapp.com/" target="_blank"><img alt="Heroku logo" src="images/heroku.png" align="right" height="45px"></a>
+<a href="https://pgs-ny-collisions.herokuapp.com/" target="_blank"><img alt="Heroku logo" src="images/heroku.jpg" align="right" height="45px"></a>
 Covers the foundations of HTML, css, javascript, bootstrap, plotly (JS and Python) and deploying a Flask app using Heroku.
 
 The output can be found [here](https://pgs-worldbank-app.herokuapp.com/)
