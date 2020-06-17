@@ -30,3 +30,10 @@ Taking labelled direct messages, and those from social-media & news, at the time
 ## Project 4 - Experimental Design & Recommendations
 
 ## Project 5 - Capstone Project
+
+## ToDo
+
+- Upload Project 4 Parts 1 & 2
+- Optimise 4.1 Starbucks task
+- Create class for Recommender (and upload to PyPi?)
+- Add hero images to this readme
