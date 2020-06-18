@@ -37,3 +37,5 @@ Taking labelled direct messages, and those from social-media & news, at the time
 - Optimise 4.1 Starbucks task
 - Create class for Recommender (and upload to PyPi?)
 - Add hero images to this readme
+- Adjust NY-collisions app so that the data is saved to improve loadtime
+- Add NYC user input options
