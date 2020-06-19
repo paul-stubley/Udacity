@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_997f23fe62a140c9b266ab345281a38c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_997f23fe62a140c9b266ab345281a38c" ></div>
+        
+</body>
+<script>    
+    
+            var map_997f23fe62a140c9b266ab345281a38c = L.map(
+                "map_997f23fe62a140c9b266ab345281a38c",
+                {
+                    center: [43.68654930963, -79.37969333997002],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_73c559734df24a00ab3eaf5618a221c2 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var marker_f837d7ca22c545a1b360d0eae08c8930 = L.marker(
+                [43.7168046, -79.4006959],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_b0dc215dbb1c4c4290e960503297081e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_f837d7ca22c545a1b360d0eae08c8930.setIcon(icon_b0dc215dbb1c4c4290e960503297081e);
+        
+    
+        var popup_b060ed628c4a4a938e0cb3de9666b0b7 = L.popup({"maxWidth": 300});
+
+        
+            var html_dceaff8f19a148609609bdabd5e51518 = $(`<div id="html_dceaff8f19a148609609bdabd5e51518" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Sugar+Miracles">Sugar Miracles</a><br> Predicted rating: 5</div>`)[0];
+            popup_b060ed628c4a4a938e0cb3de9666b0b7.setContent(html_dceaff8f19a148609609bdabd5e51518);
+        
+
+        marker_f837d7ca22c545a1b360d0eae08c8930.bindPopup(popup_b060ed628c4a4a938e0cb3de9666b0b7)
+        ;
+
+        
+    
+    
+            var marker_b985a9a1434749a1ae0c0851991de846 = L.marker(
+                [43.6459076, -79.3878224],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_a5841a0ec02d4d04b18a899310833f9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_b985a9a1434749a1ae0c0851991de846.setIcon(icon_a5841a0ec02d4d04b18a899310833f9e);
+        
+    
+        var popup_ec655d2868e44c6d8d6d87896f1418f5 = L.popup({"maxWidth": 300});
+
+        
+            var html_0f1c6af8e4bf488ba8dd18c2d63bb0ec = $(`<div id="html_0f1c6af8e4bf488ba8dd18c2d63bb0ec" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Koha+Pacific+Kitchen">Koha Pacific Kitchen</a><br> Predicted rating: 5</div>`)[0];
+            popup_ec655d2868e44c6d8d6d87896f1418f5.setContent(html_0f1c6af8e4bf488ba8dd18c2d63bb0ec);
+        
+
+        marker_b985a9a1434749a1ae0c0851991de846.bindPopup(popup_ec655d2868e44c6d8d6d87896f1418f5)
+        ;
+
+        
+    
+    
+            var marker_298738b61fbb4e5dbc694b6201e5b21b = L.marker(
+                [43.6635147, -79.3706875],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_8cf39eb3d28f471fb68b1e606d7b4e6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_298738b61fbb4e5dbc694b6201e5b21b.setIcon(icon_8cf39eb3d28f471fb68b1e606d7b4e6b);
+        
+    
+        var popup_1c692fdc886e4d15852260d27413e7a8 = L.popup({"maxWidth": 300});
+
+        
+            var html_0568d6dba24343cd9e13d83c57975dcd = $(`<div id="html_0568d6dba24343cd9e13d83c57975dcd" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Jugemu">Jugemu</a><br> Predicted rating: 5</div>`)[0];
+            popup_1c692fdc886e4d15852260d27413e7a8.setContent(html_0568d6dba24343cd9e13d83c57975dcd);
+        
+
+        marker_298738b61fbb4e5dbc694b6201e5b21b.bindPopup(popup_1c692fdc886e4d15852260d27413e7a8)
+        ;
+
+        
+    
+    
+            var marker_aae7201f9c874f9691307bf46e8ea6bc = L.marker(
+                [43.6582223, -79.3390409],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_7acc697599d94b68b7a1cc5c31d1a219 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_aae7201f9c874f9691307bf46e8ea6bc.setIcon(icon_7acc697599d94b68b7a1cc5c31d1a219);
+        
+    
+        var popup_7b77e4aa5a594fddb2fac0a31d87ed59 = L.popup({"maxWidth": 300});
+
+        
+            var html_bc70a778d4a3446db5674ac184e8efe9 = $(`<div id="html_bc70a778d4a3446db5674ac184e8efe9" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Gale's+Snack+Bar">Gale's Snack Bar</a><br> Predicted rating: 5</div>`)[0];
+            popup_7b77e4aa5a594fddb2fac0a31d87ed59.setContent(html_bc70a778d4a3446db5674ac184e8efe9);
+        
+
+        marker_aae7201f9c874f9691307bf46e8ea6bc.bindPopup(popup_7b77e4aa5a594fddb2fac0a31d87ed59)
+        ;
+
+        
+    
+    
+            var marker_13b0b9d3401548839e472ce0dd37b685 = L.marker(
+                [43.6974669682, -79.4413521141],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_db79020593a541268a6daef5b37c03cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_13b0b9d3401548839e472ce0dd37b685.setIcon(icon_db79020593a541268a6daef5b37c03cd);
+        
+    
+        var popup_01091fa915444c9db8df75b76adf9636 = L.popup({"maxWidth": 300});
+
+        
+            var html_515402d5697d4ca8bcd4313adaf2aa1a = $(`<div id="html_515402d5697d4ca8bcd4313adaf2aa1a" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Hot+Pot+Restaurant">Hot Pot Restaurant</a><br> Predicted rating: 5</div>`)[0];
+            popup_01091fa915444c9db8df75b76adf9636.setContent(html_515402d5697d4ca8bcd4313adaf2aa1a);
+        
+
+        marker_13b0b9d3401548839e472ce0dd37b685.bindPopup(popup_01091fa915444c9db8df75b76adf9636)
+        ;
+
+        
+    
+    
+            var marker_15bca62bb8204193ac78b2bc28763670 = L.marker(
+                [43.6780902, -79.4432957],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_c1a634d8619342f0a617c55036bd5cb5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_15bca62bb8204193ac78b2bc28763670.setIcon(icon_c1a634d8619342f0a617c55036bd5cb5);
+        
+    
+        var popup_dc73b3dc05e6459782a4f67895f48689 = L.popup({"maxWidth": 300});
+
+        
+            var html_05d58958389c4c1584e8ca90ac113992 = $(`<div id="html_05d58958389c4c1584e8ca90ac113992" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Sofra+Grill+Express">Sofra Grill Express</a><br> Predicted rating: 5</div>`)[0];
+            popup_dc73b3dc05e6459782a4f67895f48689.setContent(html_05d58958389c4c1584e8ca90ac113992);
+        
+
+        marker_15bca62bb8204193ac78b2bc28763670.bindPopup(popup_dc73b3dc05e6459782a4f67895f48689)
+        ;
+
+        
+    
+    
+            var marker_405301a22a124494991bafe1c0f3d1d4 = L.marker(
+                [43.6447793, -79.416005],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_663456da7dd647c4885fcb9a157a836b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_405301a22a124494991bafe1c0f3d1d4.setIcon(icon_663456da7dd647c4885fcb9a157a836b);
+        
+    
+        var popup_d6edf93cc8a14af095af836382c87d3a = L.popup({"maxWidth": 300});
+
+        
+            var html_2809d5c12ce14f069f0ef86c04e9cc81 = $(`<div id="html_2809d5c12ce14f069f0ef86c04e9cc81" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Linwood+Essentials">Linwood Essentials</a><br> Predicted rating: 4</div>`)[0];
+            popup_d6edf93cc8a14af095af836382c87d3a.setContent(html_2809d5c12ce14f069f0ef86c04e9cc81);
+        
+
+        marker_405301a22a124494991bafe1c0f3d1d4.bindPopup(popup_d6edf93cc8a14af095af836382c87d3a)
+        ;
+
+        
+    
+    
+            var marker_19a723ea664e467990aa8cd7e01e28c9 = L.marker(
+                [43.7605263, -79.2180631],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_b941db121a1d408391f7e65103f97abe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_19a723ea664e467990aa8cd7e01e28c9.setIcon(icon_b941db121a1d408391f7e65103f97abe);
+        
+    
+        var popup_d544a58c982f4901a2beab7349848873 = L.popup({"maxWidth": 300});
+
+        
+            var html_a56e6aff7f734f69b5f1cf0bdb6a7200 = $(`<div id="html_a56e6aff7f734f69b5f1cf0bdb6a7200" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Chicken+Kitchen">Chicken Kitchen</a><br> Predicted rating: 4</div>`)[0];
+            popup_d544a58c982f4901a2beab7349848873.setContent(html_a56e6aff7f734f69b5f1cf0bdb6a7200);
+        
+
+        marker_19a723ea664e467990aa8cd7e01e28c9.bindPopup(popup_d544a58c982f4901a2beab7349848873)
+        ;
+
+        
+    
+    
+            var marker_80ceed53cd07466fbe0f6644521aa2e6 = L.marker(
+                [43.6645288, -79.4131193],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_91a107ca9bb44eeea886c792e2435a33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_80ceed53cd07466fbe0f6644521aa2e6.setIcon(icon_91a107ca9bb44eeea886c792e2435a33);
+        
+    
+        var popup_35ac35d526da498bb515d0a345c7c68c = L.popup({"maxWidth": 300});
+
+        
+            var html_aba92d166e95472c956c79cf55d64160 = $(`<div id="html_aba92d166e95472c956c79cf55d64160" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Rustle+&+Still+Café">Rustle & Still Café</a><br> Predicted rating: 4</div>`)[0];
+            popup_35ac35d526da498bb515d0a345c7c68c.setContent(html_aba92d166e95472c956c79cf55d64160);
+        
+
+        marker_80ceed53cd07466fbe0f6644521aa2e6.bindPopup(popup_35ac35d526da498bb515d0a345c7c68c)
+        ;
+
+        
+    
+    
+            var marker_570aa2faca7847728ed7e2b728d1e146 = L.marker(
+                [43.647099, -79.382649],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_3f493ed578534d449a1c4e5f8057b00b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_570aa2faca7847728ed7e2b728d1e146.setIcon(icon_3f493ed578534d449a1c4e5f8057b00b);
+        
+    
+        var popup_7ac2b488489848b998a4d786afd2e98b = L.popup({"maxWidth": 300});
+
+        
+            var html_6bceb260b73041f48b661f3b0b42f19c = $(`<div id="html_6bceb260b73041f48b661f3b0b42f19c" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+McDonald's">McDonald's</a><br> Predicted rating: 4</div>`)[0];
+            popup_7ac2b488489848b998a4d786afd2e98b.setContent(html_6bceb260b73041f48b661f3b0b42f19c);
+        
+
+        marker_570aa2faca7847728ed7e2b728d1e146.bindPopup(popup_7ac2b488489848b998a4d786afd2e98b)
+        ;
+
+        
+    
+    
+            var marker_49ba7799129a416c95b8162d28626e55 = L.marker(
+                [43.8229828, -79.3063932],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_4852cd64ab214951a09ca291d8b2a302 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_49ba7799129a416c95b8162d28626e55.setIcon(icon_4852cd64ab214951a09ca291d8b2a302);
+        
+    
+        var popup_44b629a674ad47ce9a9b124942f0a012 = L.popup({"maxWidth": 300});
+
+        
+            var html_7402892d4eb341c1b2b371a214d4b421 = $(`<div id="html_7402892d4eb341c1b2b371a214d4b421" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Fat+Ninja+Bite">Fat Ninja Bite</a><br> Predicted rating: 4</div>`)[0];
+            popup_44b629a674ad47ce9a9b124942f0a012.setContent(html_7402892d4eb341c1b2b371a214d4b421);
+        
+
+        marker_49ba7799129a416c95b8162d28626e55.bindPopup(popup_44b629a674ad47ce9a9b124942f0a012)
+        ;
+
+        
+    
+    
+            var marker_48a563873aba4bc8b9d3215409abfb06 = L.marker(
+                [43.6486362, -79.3817439],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_adf304e6309a4a6f977edf4faa16123b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_48a563873aba4bc8b9d3215409abfb06.setIcon(icon_adf304e6309a4a6f977edf4faa16123b);
+        
+    
+        var popup_4e822f5bc4c8417ea4f0a9a4e17bac4e = L.popup({"maxWidth": 300});
+
+        
+            var html_c08bcba93f4f448b8ebad1b4618c750a = $(`<div id="html_c08bcba93f4f448b8ebad1b4618c750a" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Five+Guys">Five Guys</a><br> Predicted rating: 4</div>`)[0];
+            popup_4e822f5bc4c8417ea4f0a9a4e17bac4e.setContent(html_c08bcba93f4f448b8ebad1b4618c750a);
+        
+
+        marker_48a563873aba4bc8b9d3215409abfb06.bindPopup(popup_4e822f5bc4c8417ea4f0a9a4e17bac4e)
+        ;
+
+        
+    
+    
+            var marker_6a05d689f858453ebfe797e697e54c12 = L.marker(
+                [43.6410601, -79.4350453],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_9e7a37f1c2c74849885af59adb0f6da9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_6a05d689f858453ebfe797e697e54c12.setIcon(icon_9e7a37f1c2c74849885af59adb0f6da9);
+        
+    
+        var popup_1f4d870d31554f4a8ae30bf0df9e065f = L.popup({"maxWidth": 300});
+
+        
+            var html_28404e1f19d648c4ab0de09812f1375a = $(`<div id="html_28404e1f19d648c4ab0de09812f1375a" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Potala+kitchen">Potala kitchen</a><br> Predicted rating: 4</div>`)[0];
+            popup_1f4d870d31554f4a8ae30bf0df9e065f.setContent(html_28404e1f19d648c4ab0de09812f1375a);
+        
+
+        marker_6a05d689f858453ebfe797e697e54c12.bindPopup(popup_1f4d870d31554f4a8ae30bf0df9e065f)
+        ;
+
+        
+    
+    
+            var marker_00c5a4fda6a249938253b0d33ba43ec8 = L.marker(
+                [43.6613395795, -79.3383130385],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_bb64429f931b46eb96e1395e895f766e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_00c5a4fda6a249938253b0d33ba43ec8.setIcon(icon_bb64429f931b46eb96e1395e895f766e);
+        
+    
+        var popup_8afb81b8fe7d462698bbbba013bb0269 = L.popup({"maxWidth": 300});
+
+        
+            var html_bbb5277dc25d4cd496a52a03aa809a12 = $(`<div id="html_bbb5277dc25d4cd496a52a03aa809a12" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Te+Aro">Te Aro</a><br> Predicted rating: 4</div>`)[0];
+            popup_8afb81b8fe7d462698bbbba013bb0269.setContent(html_bbb5277dc25d4cd496a52a03aa809a12);
+        
+
+        marker_00c5a4fda6a249938253b0d33ba43ec8.bindPopup(popup_8afb81b8fe7d462698bbbba013bb0269)
+        ;
+
+        
+    
+    
+            var marker_bad19076288e4eaebf9ed3a527bfa89f = L.marker(
+                [43.768141, -79.227599],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_2feb586b9a424e9c93461f2bab20fe60 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_bad19076288e4eaebf9ed3a527bfa89f.setIcon(icon_2feb586b9a424e9c93461f2bab20fe60);
+        
+    
+        var popup_62e6b973f079473c95ae6d9a5401726f = L.popup({"maxWidth": 300});
+
+        
+            var html_ee5545fb442d4c5d8d147305244d3ae1 = $(`<div id="html_ee5545fb442d4c5d8d147305244d3ae1" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Sa-Fire+Restaurant+&+Bar">Sa-Fire Restaurant & Bar</a><br> Predicted rating: 4</div>`)[0];
+            popup_62e6b973f079473c95ae6d9a5401726f.setContent(html_ee5545fb442d4c5d8d147305244d3ae1);
+        
+
+        marker_bad19076288e4eaebf9ed3a527bfa89f.bindPopup(popup_62e6b973f079473c95ae6d9a5401726f)
+        ;
+
+        
+    
+    
+            var marker_ff8c92244ade466782e23aeac3277ccd = L.marker(
+                [43.6527051, -79.4323481],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_d366160cfa8349dcad712a6595efabd0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_ff8c92244ade466782e23aeac3277ccd.setIcon(icon_d366160cfa8349dcad712a6595efabd0);
+        
+    
+        var popup_9e75f52c784d48f68593e7a7b56b87f2 = L.popup({"maxWidth": 300});
+
+        
+            var html_fd87cd2ae5b941c983a97a57c11a4bfd = $(`<div id="html_fd87cd2ae5b941c983a97a57c11a4bfd" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Black+Cat+Espresso+Bar">Black Cat Espresso Bar</a><br> Predicted rating: 4</div>`)[0];
+            popup_9e75f52c784d48f68593e7a7b56b87f2.setContent(html_fd87cd2ae5b941c983a97a57c11a4bfd);
+        
+
+        marker_ff8c92244ade466782e23aeac3277ccd.bindPopup(popup_9e75f52c784d48f68593e7a7b56b87f2)
+        ;
+
+        
+    
+    
+            var marker_15bad661b7374f02bfbcc7cade506006 = L.marker(
+                [43.6655525, -79.4113545],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_9f28b28646c04bd09d66b9edd1874f2a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_15bad661b7374f02bfbcc7cade506006.setIcon(icon_9f28b28646c04bd09d66b9edd1874f2a);
+        
+    
+        var popup_10cd7f6eee384116800b178b9023fa19 = L.popup({"maxWidth": 300});
+
+        
+            var html_a5003df9d91d46a39e88cbf9471a3b8e = $(`<div id="html_a5003df9d91d46a39e88cbf9471a3b8e" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Fit+For+Life">Fit For Life</a><br> Predicted rating: 4</div>`)[0];
+            popup_10cd7f6eee384116800b178b9023fa19.setContent(html_a5003df9d91d46a39e88cbf9471a3b8e);
+        
+
+        marker_15bad661b7374f02bfbcc7cade506006.bindPopup(popup_10cd7f6eee384116800b178b9023fa19)
+        ;
+
+        
+    
+    
+            var marker_446b4fcf4c134cb49b35b66ab32811ef = L.marker(
+                [43.6552619, -79.4141425],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_173379ba018447da9b03a7ae75fa4538 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_446b4fcf4c134cb49b35b66ab32811ef.setIcon(icon_173379ba018447da9b03a7ae75fa4538);
+        
+    
+        var popup_7f98c86837d046c2a414eb114d8bdf10 = L.popup({"maxWidth": 300});
+
+        
+            var html_d583f120ecae4e379898f45d48d55a75 = $(`<div id="html_d583f120ecae4e379898f45d48d55a75" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Amico+Sushi+&+Grill">Amico Sushi & Grill</a><br> Predicted rating: 4</div>`)[0];
+            popup_7f98c86837d046c2a414eb114d8bdf10.setContent(html_d583f120ecae4e379898f45d48d55a75);
+        
+
+        marker_446b4fcf4c134cb49b35b66ab32811ef.bindPopup(popup_7f98c86837d046c2a414eb114d8bdf10)
+        ;
+
+        
+    
+    
+            var marker_fe626bbdbf02481394224e9632afe026 = L.marker(
+                [43.6450406075, -79.414875227],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_2583210ab70c435294ee8befe2fd2cf1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_fe626bbdbf02481394224e9632afe026.setIcon(icon_2583210ab70c435294ee8befe2fd2cf1);
+        
+    
+        var popup_56e72a6f95204db8912be803422350c3 = L.popup({"maxWidth": 300});
+
+        
+            var html_86e6dbd8e7ba4ae59ba5688194672eaf = $(`<div id="html_86e6dbd8e7ba4ae59ba5688194672eaf" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Rose+and+Sons+Swan">Rose and Sons Swan</a><br> Predicted rating: 4</div>`)[0];
+            popup_56e72a6f95204db8912be803422350c3.setContent(html_86e6dbd8e7ba4ae59ba5688194672eaf);
+        
+
+        marker_fe626bbdbf02481394224e9632afe026.bindPopup(popup_56e72a6f95204db8912be803422350c3)
+        ;
+
+        
+    
+    
+            var marker_7471004758c24aa09cc07fda070836b5 = L.marker(
+                [43.7933266374, -79.4193211198],
+                {}
+            ).addTo(map_997f23fe62a140c9b266ab345281a38c);
+        
+    
+            var icon_e06b3b8d64ee44f29e2d99406ef1b950 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_7471004758c24aa09cc07fda070836b5.setIcon(icon_e06b3b8d64ee44f29e2d99406ef1b950);
+        
+    
+        var popup_f73af9a72b3e4911ba198ed97bab122f = L.popup({"maxWidth": 300});
+
+        
+            var html_9c1c886ed6c14b46b38d0c6b701088fa = $(`<div id="html_9c1c886ed6c14b46b38d0c6b701088fa" style="width: 100.0%; height: 100.0%;"><a target="_blank" href="http://www.google.com/search?q=toronto+Mikaku+Izakaya">Mikaku Izakaya</a><br> Predicted rating: 4</div>`)[0];
+            popup_f73af9a72b3e4911ba198ed97bab122f.setContent(html_9c1c886ed6c14b46b38d0c6b701088fa);
+        
+
+        marker_7471004758c24aa09cc07fda070836b5.bindPopup(popup_f73af9a72b3e4911ba198ed97bab122f)
+        ;
+
+        
+    
+</script>
