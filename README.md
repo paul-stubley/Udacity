@@ -1,7 +1,7 @@
 # Udacity
 This repo contains work towards the [Udacity](https://www.udacity.com/) Data Science NanoDegree.  It is work in progress split by Project.
 
-## Project 1 - Intro to DS
+## [Project 1 - Intro to DS](https://github.com/paul-stubley/Udacity/tree/master/Project_1__Board_Games) 
 <a href="https://medium.com/@paulgstubley/bored-games-c31340859bef?source=friends_link&sk=ed9a21aa4b75262a4a46b7dec87a9df6" target="_blank"><img alt="Medium logo" src="images/medium.png" align="right" height="45px"></a> Covers Exploratory Data analysis of an interesting data set, a simple LinearRegression model fit, and creating content to upload to a Medium post.
 
 ## Project 2 - Software Engineering
