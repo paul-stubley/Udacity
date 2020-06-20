@@ -19,7 +19,7 @@ Covers the foundations of HTML, css, javascript, bootstrap, plotly (JS and Pytho
 
 The output can be found [here](https://pgs-worldbank-app.herokuapp.com/)
 
-## [Project 3 - Data Engineering](Project_3__Disaster_Respone_Pipeline)
+## [Project 3 - Data Engineering](Project_3__Disaster_Response_Pipeline)
 
 ### Disaster Response ML pipeline & App
 
