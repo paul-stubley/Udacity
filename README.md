@@ -1,10 +1,10 @@
 # Udacity
 This repo contains work towards the [Udacity](https://www.udacity.com/) Data Science NanoDegree.  It is work in progress split by Project.
 
-## [Project 1 - Intro to DS](https://github.com/paul-stubley/Udacity/tree/master/Project_1__Board_Games) 
+## [Project 1 - Intro to DS](Project_1__Board_Games) 
 <a href="https://medium.com/@paulgstubley/bored-games-c31340859bef?source=friends_link&sk=ed9a21aa4b75262a4a46b7dec87a9df6" target="_blank"><img alt="Medium logo" src="images/medium.png" align="right" height="45px"></a> Covers Exploratory Data analysis of an interesting data set, a simple LinearRegression model fit, and creating content to upload to a Medium post.
 
-## Project 2 - Software Engineering
+## [Project 2 - Software Engineering](Project_2__Software_Engineering)
 ### Introduction to OOP
 <a href="https://pypi.org/project/pgs-climbing/" target="_blank"><img alt="PyPi logo" src="images/pypi.png" align="right" height="45px"></a>
 Covers the foundations of OOP including:
@@ -19,7 +19,7 @@ Covers the foundations of HTML, css, javascript, bootstrap, plotly (JS and Pytho
 
 The output can be found [here](https://pgs-worldbank-app.herokuapp.com/)
 
-## Project 3 - Data Engineering
+## [Project 3 - Data Engineering](Project_3__Disaster_Respone_Pipeline)
 
 ### Disaster Response ML pipeline & App
 
@@ -27,7 +27,7 @@ This project covers the ETL & ML pipelines for a disaster recovery app, as well 
 
 Taking labelled direct messages, and those from social-media & news, at the time of a disaster, can we classify unlabelled messages into categories (e.g. Fire, Infrastrucure, Medical Assistance etc.) to pass on to emergency & support services.
 
-## Project 4 - Experimental Design & Recommendations
+## [Project 4 - Experimental Design & Recommendations](Project_4__Recommendation_Engines)
 
 ## Project 5 - Capstone Project
 
