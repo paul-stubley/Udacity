@@ -1,0 +1,13 @@
+ 
+\begin{align*}
+&\rm{Emily_{Low Cost}} &\leftarrow& \hspace{0.5cm} \rm{Emily_{Low Cost}} 
++ 2 \times \alpha \times \rm{error} \times \rm{Top Burgers_{Low Cost}}\\
+&\rm{Emily_{Tablecloths}} &\leftarrow& \hspace{0.5cm}...\\
+&\rm{Emily_{Staff}}&\leftarrow& \hspace{0.5cm}...
+\\
+\\
+&\rm{Top Burgers_{Low Cost}} &\leftarrow& \hspace{0.5cm} \rm{Top Burgers_{Low Cost}} 
++ 2 \times \alpha \times \rm{error} \times \rm{Emily_{Low Cost}}\\
+&\rm{Top Burgers_{Tablecloths}} &\leftarrow& \hspace{0.5cm}...\\
+&\rm{Top Burgers_{Staff}}&\leftarrow& \hspace{0.5cm}...
+\end{align*}
