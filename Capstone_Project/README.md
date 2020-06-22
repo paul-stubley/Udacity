@@ -3,6 +3,10 @@ This project covers using the Yelp 2016 review set to recommend restaurants to u
 
 After some optimisation of the fitting parameters, we are able to predict ratings slightly more personalised than simply predicting the average-restaurant rating.
 
+The issues of skewed and imbalanced training ratings are briefly discussed.
+
+We also create a reasonably generic recommender python class which can be used for any ratings dataset that is 'one-row-per-review' to carry out recommendations based on top-rated and collaborative filtering using FunkSVD.  A minimal example of using this class is included in the `recommender.py` file's `main()` function.
+
 ## File structure
 
 ```
@@ -10,10 +14,11 @@ After some optimisation of the fitting parameters, we are able to predict rating
 ├── Data_Cleaning.ipynb                 - Data cleaning notebook
 ├── Restaurant_Recommender.ipynb        - Analysis notebook
 ├── recommender.py                      - Python class for the recommender function.
+├── requirements.txt                    - Required python libraries
 ├── data                                - Cleaned input data (note raw data can be found at the link below)
 │   ├── businesses_toronto.json             - Cleaned businesses data
 │   └── toronto_reviews_sub.json            - Cleaned review data
-├── images                              - Output images
+└── images                              - Output images
     ├── Confusion.png
     ├── Toronto.html
     ├── latex.txt
@@ -51,7 +56,7 @@ The recommender creates a map output with predicted ratings and links to a googl
 
 Full details can be found in the `recommender` script.
 
-One key thing to note is that the `recommender.fit()` method uses [Numba](http://numba.pydata.org/), which increases the speed of the fit method by ~300X (compared to the method introduced in the course).
+One key thing to note is that the `recommender.fit()` method uses [Numba](http://numba.pydata.org/), which increases the speed of the fit method by *~300X* (compared to the method introduced in the course). The top code-block runs the Numba-ised version of the fit method, the bottom code-block runs the original python version.
 
 <p align="center">
 <img src="images/numba.png" width=80%>

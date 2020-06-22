@@ -88,7 +88,7 @@ class Recommender():
     def __init__(self, ):
         '''No need to initialise'''
         
-    def fit(self, latent_features=10, learning_rate=0.0001, iters=100, print_every=False, original_func = False):
+    def fit(self, latent_features=10, learning_rate=0.0001, iters=100, print_every=False):
         '''Numba-ised function to perform SVD of the user/item matrix into two matrices using FunkSVD
         Ouputs a user/latent-feature matrix and a latent-feature/item matrix
         Args:
@@ -104,14 +104,8 @@ class Recommender():
              self.user_mat - (numpy array) a user by latent feature matrix
              self.item_mat - (numpy array) a latent feature by item matrix
         '''
-        if original_func:
-            self.user_mat, self.item_mat = _fit.py_func(np.array(self.ratings_mat)
-                                , latent_features
-                                , learning_rate
-                                , iters
-                                , print_every)
-        else:        
-            self.user_mat, self.item_mat = _fit(np.array(self.ratings_mat)
+        
+        self.user_mat, self.item_mat = _fit(np.array(self.ratings_mat)
                                 , latent_features
                                 , learning_rate
                                 , iters
