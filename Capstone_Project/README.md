@@ -1,5 +1,5 @@
 # Capstone Project - Recommending Restaurants
-This project covers using the Yelp 2016 review set to recommend restaurants to users using various methods.  The aim is to recommend restaurants in a more personalised way than simply suggesting the top rating restaurants in a given city.
+This project covers using the Yelp 2016 review set to recommend restaurants to users using various methods.  The aim is to recommend restaurants in a more personalised way than simply suggesting the top rating restaurants in a given city.  A blog writeup of the work here can be found on [Medium](https://medium.com/@paulgstubley/personalised-restaurant-recommendations-using-funksvd-3beff200b01c?source=friends_link&sk=08979761b0ece6de2c965b2880e048f8).
 
 After some optimisation of the fitting parameters, we are able to predict ratings slightly more personalised than simply predicting the average-restaurant rating.
 
@@ -36,6 +36,8 @@ The cleaned data is summarised below:
 <img src="images/EDA.png" width=80%>
 </p>
 
+A function which can encode, and simplify, complicated user/item IDs to a unique integer number is included in this notebook, but not used in the final analysis.
+
 ## Analysis
 
 Full details can be found in the `Restaurant_Recommender` notebook.  Example outputs are shown below.
@@ -46,7 +48,7 @@ We can compare the predicted ratings with the actual ratings from the testing se
 <img src="images/Confusion.png" width=80%>
 </p>
 
-The recommender creates a map output with predicted ratings and links to a google search.
+The recommender creates a map output with predicted ratings and links to an appropriate google search for more information.
 
 <p align="center">
 <img src="images/output_map.png" width=80%>
