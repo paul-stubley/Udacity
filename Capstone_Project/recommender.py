@@ -31,8 +31,9 @@ def _fit(ratings_mat, latent_features, learning_rate, iters, print_every):
         sse_accum = 0
 
         # header for running results
-        print("Optimization Statistics")
-        print("Iterations\t| Mean Squared Error\t")
+        if print_every:
+            print("Optimization Statistics")
+            print("Iterations\t| Mean Squared Error\t")
 
         # for each iteration
         for i in range(iters):
@@ -53,9 +54,11 @@ def _fit(ratings_mat, latent_features, learning_rate, iters, print_every):
                         user_mat[u,:] = user_mat[u,:] + learning_rate * 2 * err * item_mat[:,m].T
                         item_mat[:,m] = item_mat[:,m] + learning_rate * 2 * err * user_mat[u,:].T
 
-            # print results for iteration
-            if (i+1)/print_every == round((i+1)/print_every):
-                print(i+1,'\t\t|', round(sse_accum / num_ratings,5))
+                        
+            if print_every:
+                # print results for iteration
+                if (i+1)/print_every == round((i+1)/print_every):
+                    print(i+1,'\t\t|', round(sse_accum / num_ratings,5))
 
         return user_mat, item_mat 
 
@@ -85,7 +88,7 @@ class Recommender():
     def __init__(self, ):
         '''No need to initialise'''
         
-    def fit(self, latent_features=10, learning_rate=0.0001, iters=100, print_every=1):
+    def fit(self, latent_features=10, learning_rate=0.0001, iters=100, print_every=False):
         '''Numba-ised function to perform SVD of the user/item matrix into two matrices using FunkSVD
         Ouputs a user/latent-feature matrix and a latent-feature/item matrix
         Args:
@@ -166,19 +169,23 @@ class Recommender():
 
         return None
         
-    def compare_train_to_predictions(self, test_df, plot=True):
+    def compare_train_to_predictions(self, test_df, ratings_mat_pred = None, plot=True):
         '''Compares the overlapping sections of the test ratings with the
             predicted ratings from FunkSVD
         
         Args:
-            test_df - (pd.Dataframe) The test ratings df, one row per rating
-                            , same column names as the train dataframe
-            plot    - (bool) whether to plot the actual vs predicted ratings
+            test_df          - (pd.DataFrame) The test ratings df, one row per rating
+                                   , same column names as the train dataframe
+            ratings_mat_pred - (optional pd.DataFrame) Supply an alternative prediction matrix to compare
+            plot             - (bool) whether to plot the actual vs predicted ratings
+            
             
         Returns:
             confusion_array - (np.ndarray) actual vs predicted ratings confusion matrix
             
         '''
+        if ratings_mat_pred is None:
+            ratings_mat_pred = self.ratings_mat_pred
         
         # Create the test user-item matrix
         ratings_mat_test = self.get_user_item_matrix(test_df
@@ -193,12 +200,12 @@ class Recommender():
 
         
         # Get train_matrix cropped to size of test matrix
-        ratings_mat_pred_cropped = self.ratings_mat_pred.loc[shared_users,shared_items]
+        ratings_mat_pred_cropped = ratings_mat_pred.loc[shared_users,shared_items]
         ratings_mat_test_cropped = ratings_mat_test.loc[shared_users,shared_items]
         
         # Confirm they have the same order of rows and columns
         err_string = "The {} in the predicted matrix and test matrix " \
-                        +"have not been overlapped correctly inside this function"
+                        + "have not been overlapped correctly inside this function"
         assert (ratings_mat_pred_cropped.index != ratings_mat_test_cropped.index) \
                 .sum() == 0  , err_string.format("user indeces")
         assert (ratings_mat_pred_cropped.columns != ratings_mat_test_cropped.columns) \
@@ -206,9 +213,11 @@ class Recommender():
         
         # Compare overlaps between prediction and test by element-wise concatenation of two DFs
         # Concatenate element-wise
-        pred =     ratings_mat_pred_cropped.applymap(lambda y: str(round(y)))
+        pred =  ratings_mat_pred_cropped.applymap(lambda y: str(round(y)))
         test =  ratings_mat_test_cropped.fillna(-1).applymap(lambda y: str(round(y)))
         actual_vs_prediction = test.apply(lambda t : t+','+pred[t.name])
+        
+        SSE = ((ratings_mat_test_cropped-ratings_mat_pred_cropped)**2).sum().sum()
         
         # Get value counts of each true-prediction combination
         vc = actual_vs_prediction.melt().value.value_counts()
@@ -226,21 +235,37 @@ class Recommender():
         if plot:
             fig, ax = plt.subplots(1,2,figsize=(12,4))
             sns.heatmap(confusion_array, annot=True, fmt='.0f', ax=ax[0])
-            plt.xticks(np.arange(self.min_rating,self.max_rating+1,1)-0.5
-                      ,np.arange(self.min_rating,self.max_rating+1,1))
-            plt.yticks(np.arange(self.min_rating,self.max_rating+1,1)-0.5
-                      ,np.arange(self.min_rating,self.max_rating+1,1))
+            ax[0].set_xticks(np.arange(self.min_rating,self.max_rating+1,1)-0.5)
+            ax[0].set_xticklabels(np.arange(self.min_rating,self.max_rating+1,1))
+            ax[0].set_yticks(np.arange(self.min_rating,self.max_rating+1,1)-0.5)
+            ax[0].set_yticklabels(np.arange(self.min_rating,self.max_rating+1,1))
             ax[0].xaxis.tick_top()
+            ax[0].set_ylabel('Actual Rating')
+            ax[0].set_xlabel('Predicted Rating')
+            ax[0].xaxis.set_label_position('top')
+
+            # Get list of predictions and actuals (ignoring nans)
+            test_list = ratings_mat_test_cropped.melt() \
+                                    [~ratings_mat_test_cropped.melt().value.isna()].value.to_list()
+            pred_list = round(ratings_mat_pred_cropped.melt() \
+                                [~ratings_mat_pred_cropped.melt().value.isna()].value).to_list()  
             
             ### Need to get list of predictions and actuals ####
             
-#             ax[1].hist(acts, density=True, alpha=.5, label='actual', bins=range(8));
-#             ax[1].hist(preds, density=True, alpha=.5, label='predicted', bins=range(8));
-#             ax[1].legend(loc=2, prop={'size': 15});
-#             ax[1].xlabel('Rating');
-#             ax[1].title('Predicted vs. Actual Rating');
+            ax[1].hist(test_list, density=True, alpha=.5, label='actual', bins=range(8));
+            ax[1].hist(pred_list, density=True, alpha=.5, label='predicted', bins=range(8));
+            ax[1].legend(loc=2, prop={'size': 12});
+            ax[1].set_xlabel('Rating');
+            ax[1].set_yticks([])
+            ax[1].set_xticks(np.arange(self.min_rating,self.max_rating+1,1)+0.5)
+            ax[1].set_xticklabels(np.arange(self.min_rating,self.max_rating+1,1))
+            ax[1].spines['right'].set_visible(False)
+            ax[1].spines['left'].set_visible(False)
+            ax[1].spines['top'].set_visible(False)
+    
+            fig.suptitle('Predicted vs. Actual Ratings Distributions', y=1.1);
 
-        return confusion_array
+        return confusion_array, SSE
     
     def predict_ratings_for_user(self, user_id, num_recs=-1):
         '''For a given user_id, returns a given number of recommendations
@@ -293,10 +318,10 @@ class Recommender():
         return recomms_df
     
     
-    def plot_locations(self, recomms_df, item_name_col, latitude_name, longitude_name, info = None ,search_string='', icon='cutlery'):
+    def plot_locations(self, recomms_df, item_name_col, latitude_name, longitude_name, info = None , search_string='', icon='cutlery'):
         '''Cluster plot the locations on a Folium map
         Args:
-            items_df       - (pd.DataFrame) ideally output of self.get_item_names
+            recomms_df       - (pd.DataFrame) ideally output of self.get_item_names
             item_name_col  - (string) Name of the item column
             latitude_name  - (string) Name of the latitude column
             longitude_name - (string) Name of the longitude column
@@ -383,24 +408,26 @@ class Recommender():
                                         , self.item_id_col_name
                                         , self.rating_col_name]]      \
                         .groupby(self.item_id_col_name)[self.rating_col_name] \
-                        .aggregate({np.mean, np.size})
+                        .aggregate({np.mean, np.size}) \
+                        .rename(columns={'mean':'Avg rating','size':'# ratings'})
         
-        ordered_df = mean_ratings[mean_ratings['size']>=min_number_of_reviews] \
-                      .sort_values(by='mean',ascending=False)
+                        
+        
+        ordered_df = mean_ratings[mean_ratings['# ratings']>=min_number_of_reviews] \
+                      .sort_values(by='Avg rating',ascending=False)
     
         return ordered_df
     
-    def get_similar_items(self, item_id, n=-1):
+    def get_similar_items(self, item_id, n=None):
         '''Returns the n most similar items to item_id
         Args: 
             item_id - (int or string) item id
-            n       - (int) number of similar items to return, if -1 return all
+            n       - (int) number of similar items to return, if not supplied, return all
         Returns
             similarities - (pd.Series) item_ids as index
         '''
-        # Find number of items to return if n is not given
-        if n==-1:
-            n = self.item_df.shape[1]-1
+        if n:
+            n +=1 # To account for having to remove the first entry as it is the actual item
         
         # Normalise each items column to allow cosine similarity to be found
         normed = self.item_df.apply(lambda x: x/np.linalg.norm(x))
@@ -408,13 +435,38 @@ class Recommender():
         similarities = np.dot(np.transpose(normed[item_id]),normed)
         # Add item_ids back to similarities, sort descending, and clip to n
         similarities = pd.Series(similarities, index=self.item_df.columns) \
-                         .sort_values(ascending=False)[1:n+1] \
+                         .sort_values(ascending=False)[1:n] \
                          .rename('similarity')
         
         return  similarities
 
         
-        
+if __name__ == '__main__':
+    import recommender as r
+
+    #instantiate recommender
+    rec = r.Recommender()
+    
+    #load data
+    toronto_reviews_sub = pd.read_json('data/toronto_reviews_sub.json', orient='records')
+    df_businesses_toronto = pd.read_json('data/businesses_toronto.json', orient='records')
+    
+    #train-test split (2019 reviews form test)
+    #keep only most recent training review for each restaurant
+    toronto_reviews_train = toronto_reviews_sub[toronto_reviews_sub.year <2019]
+    toronto_reviews_test = toronto_reviews_sub[toronto_reviews_sub.year == 2019]
+    toronto_reviews_train = toronto_reviews_train[~toronto_reviews_train.duplicated(subset=['user_id','business_id'],keep='last')]
+
+    # fit recommender
+    rec.set_user_item_matrix(toronto_reviews_train,'user_id','business_id','stars')
+    rec.fit(latent_features=10, learning_rate=0.005, iters=25, print_every = 5)
+
+    # recommend 20 restaurants 
+    recs = rec.predict_ratings_for_user(user_id='--BumyUHiO_7YsHurb9Hkw', num_recs = 20)
+
+    # compare all predictions to actuals
+    confusion_array, SSE = rec.compare_train_to_predictions(toronto_reviews_test)
+    print('SSE on test set: {}'.format(round(SSE,2)))
         
         
     
